@@ -6,7 +6,9 @@
     "prod": "NODE_ENV=production node --max_old_space_size=4096 ./node_modules/webpack/bin/webpack.js -p --colors --progress",
     "build": "NODE_ENV=production webpack --colors --progress",
     "lint": "eslint --ignore-path=.eslintignore --ext .js,.html .",
-    "lint:fix": "eslint --fix --ignore-path=.eslintignore --ext .js,.html ."
+    "lint:fix": "eslint --fix --ignore-path=.eslintignore --ext .js,.html .",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Apache",
   "license": "Apache-2.0",
@@ -56,11 +58,13 @@
     "bootstrap-toggle": "^2.2.2",
     "d3": "^3.4.4",
     "d3-tip": "^0.9.1",
-    "dagre-d3": "^0.6.1",
-    "datatables.net": "^1.10.19",
-    "datatables.net-bs": "^1.10.19",
+    "dagre-d3": "^0.6.4",
+    "datatables.net": "^1.11.3",
+    "datatables.net-bs": "^1.11.0",
     "moment-timezone": "^0.5.21",
-    "npm": "^6.4.1",
-    "nvd3": "^1.8.6"
-  }
+    "npm": "^7.21.0",
+    "nvd3": "^1.8.6",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
